@@ -9,9 +9,9 @@ app: google-chrome
 
 ingredients:
   package: google-chrome-stable
-  dist: trusty
+  dist: xenial
   sources: 
-    - deb http://us.archive.ubuntu.com/ubuntu/ trusty main universe
+    - deb http://us.archive.ubuntu.com/ubuntu/ xenial main universe
   script:
     - wget -c "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
     - URL2=$(wget -q "https://api.github.com/repos/gorhill/uBlock/releases" -O - | grep browser_download_url | grep '.chromium.zip"' | head -n 1 | cut -d '"' -f 4)
@@ -22,6 +22,7 @@ ingredients:
 
 script:
   - mv ./opt/google/chrome/product_logo_32.png usr/share/icons/hicolor/32x32/apps/google-chrome.png
+  - mv ./opt/google/chrome/product_logo_32.png usr/share/icons/hicolor/256x256/apps/google-chrome.png
   - mv ./opt/google/chrome/product_logo_24.png usr/share/icons/hicolor/24x24/apps/google-chrome.png
   - mv ./opt/google/chrome/product_logo_128.png usr/share/icons/hicolor/128x128/apps/google-chrome.png
   - mv ./opt/google/chrome/product_logo_48.png usr/share/icons/hicolor/48x48/apps/google-chrome.png
