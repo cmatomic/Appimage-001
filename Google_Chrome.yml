@@ -9,9 +9,9 @@ app: google-chrome
 
 ingredients:
   package: google-chrome-stable
-  dist: xenial
+  dist: trusty
   sources: 
-    - deb http://us.archive.ubuntu.com/ubuntu/ xenial main universe
+    - deb http://us.archive.ubuntu.com/ubuntu/ trusty main universe
   script:
     - wget -c "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
     - URL2=$(wget -q "https://api.github.com/repos/gorhill/uBlock/releases" -O - | grep browser_download_url | grep '.chromium.zip"' | head -n 1 | cut -d '"' -f 4)
