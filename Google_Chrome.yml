@@ -22,11 +22,10 @@ ingredients:
 
 script:
   - mv ./opt/google/chrome/product_logo_32.png usr/share/icons/hicolor/32x32/apps/google-chrome.png
- # - mv ./opt/google/chrome/product_logo_256.png usr/share/icons/hicolor/256x256/apps/google-chrome.png
   - mv ./opt/google/chrome/product_logo_24.png usr/share/icons/hicolor/24x24/apps/google-chrome.png
   - mv ./opt/google/chrome/product_logo_128.png usr/share/icons/hicolor/128x128/apps/google-chrome.png
   - mv ./opt/google/chrome/product_logo_48.png usr/share/icons/hicolor/48x48/apps/google-chrome.png
-  - cp usr/share/icons/hicolor/256x256/apps/google-chrome.png .
+ - cp usr/share/icons/hicolor/256x256/apps/google-chrome.png .
   - sed -i -e 's|/usr/bin/google-chrome-stable %U|AppRun|g' google-chrome.desktop
   - sed -i -e 's|3.26|3.00|g' opt/google/chrome/chrome
   - cat > ./AppRun <<\EOF
